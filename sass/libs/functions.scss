@@ -1,0 +1,4 @@
+// TIMEBAR
+@function timebar-witdh($cell-width, $cell-margin) {
+    @return $cells-by-line * $cell-width + ($cells-by-line - 1) * $cell-margin * 2;
+}

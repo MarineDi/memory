@@ -1,0 +1,110 @@
+// MODALS
+@mixin bounce-in() {
+    -webkit-animation:bounce-in 1s ease 0s 1 normal;
+    -moz-animation:bounce-in 1s ease 0s 1 normal;
+    -ms-animation:bounce-in 1s ease 0s 1 normal;
+    animation:bounce-in 1s ease 0s 1 normal;
+    @-webkit-keyframes bounce-in {
+        0% { 
+            opacity: 0; 
+            -webkit-transform: scale(.3); 
+            transform: scale(.3); 
+        }
+        50% { 
+            opacity: 1; 
+            -webkit-transform: scale(1.0); 
+            transform: scale(1.0); 
+        }
+        70% { 
+            -webkit-transform: scale(0.9); 
+            transform: scale(0.9); 
+        }
+        100% { 
+            -webkit-transform: scale(1); 
+            transform: scale(1); 
+        }
+    }
+    @keyframes bounce-in {
+        0% { 
+            opacity: 0; 
+            transform: scale(.3); 
+        }
+        50% { 
+            opacity: 1; 
+            transform: scale(1.0); 
+        }
+        70% { 
+            transform: scale(0.9); 
+        }
+        100% { 
+            transform: scale(1); 
+        }
+    }
+}
+
+// CARDS 
+@mixin flipiny() {
+    -webkit-animation:flipiny 1s ease-out 0s 1 normal;
+    -moz-animation:flipiny 1s ease-out 0s 1 normal;
+    -ms-animation:flipiny 1s ease-out 0s 1 normal;
+    animation:flipiny 1s ease-out 0s 1 normal;
+    @-webkit-keyframes flipiny {
+        0% { 
+            opacity: 0; 
+            -webkit-transform: perspective(400px) rotateY(0deg); 
+            transform: perspective(400px) rotateY(90deg); 
+        }
+        40% { 
+            -webkit-transform: perspective(400px) rotateY(0deg); 
+            transform: perspective(400px) rotateY(-10deg); 
+        }
+        70% { 
+            -webkit-transform: perspective(400px) rotateY(0deg); 
+            transform: perspective(400px) rotateY(10deg); 
+        }
+        100% { 
+            opacity: 1; 
+            -webkit-transform: perspective(400px) rotateY(0deg); 
+            transform: perspective(400px) rotateY(0deg); 
+        }
+    }
+    @keyframes flipiny {
+        0% { 
+            opacity: 0; transform: perspective(400px) rotateY(90deg); 
+        }
+        40% { 
+            transform: perspective(400px) rotateY(-10deg); 
+        }
+        70% { 
+            transform: perspective(400px) rotateY(10deg); 
+        }
+        100% { 
+            opacity: 1; 
+            transform: perspective(400px) rotateY(0deg); 
+        }
+    }
+}
+
+// TIMEBAR 
+@mixin slidein() {    
+    -webkit-animation: 120s linear 0s slidein;
+    -moz-animation: 120s linear 0s slidein;
+    -ms-animation: 120s linear 0s slidein;
+    animation: 120s linear 0s slidein;
+}
+@-webkit-keyframes slidein {
+    from { 
+        width: 0%;
+    }
+    to { 
+        width: 100%; 
+    }
+}
+@keyframes slidein {
+    from { 
+        width: 0%;
+    }
+    to { 
+        width: 100%; 
+    }
+}
